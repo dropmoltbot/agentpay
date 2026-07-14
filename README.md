@@ -2,7 +2,7 @@
 
 **API + Cipher + Hex. The encrypted payment protocol for AI agents.**
 
-Open-source x402 + MPP client for AI agents. Multi-chain. Zero custody. 31+ public API registry included.
+Open-source x402 + MPP client for AI agents. Multi-chain. Zero custody. 1793+ public API registry across 53 categories included.
 
 ```
 npm install ap1ph3x
@@ -20,7 +20,7 @@ npm install ap1ph3x
 | Single chain | 6 chains (Base, ETH, Tempo, Polygon, Monad, BSC) |
 | Custodial risk | Zero custody — key never leaves your process |
 | Single protocol | x402 **AND** MPP auto-detection |
-| Manual API discovery | 31+ API registry built-in |
+| Manual API discovery | 1793+ API registry built-in |
 | No free API support | 17 free APIs (no key, no payment needed) |
 
 ## Quick Start
