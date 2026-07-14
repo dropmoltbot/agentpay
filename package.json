@@ -1,7 +1,7 @@
 {
-  "name": "@anthropic-ai/agentpay",
+  "name": "@dropxtor/agentpay",
   "version": "0.1.0",
-  "description": "Open-source payment client for AI agents — x402 + MPP, multi-chain, zero custodial risk",
+  "description": "Open-source payment client for AI agents — x402 + MPP, multi-chain, zero custody. 30+ public API registry included.",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -33,9 +33,9 @@
   "author": "dropxtor <dropxtor@proton.me>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/dropmoltbot/agentpay"
+    "url": "https://github.com/dropxtor/agentpay"
   },
-  "homepage": "https://github.com/dropmoltbot/agentpay",
+  "homepage": "https://github.com/dropxtor/agentpay",
   "engines": {
     "node": ">=18"
   },

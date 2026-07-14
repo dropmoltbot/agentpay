@@ -4,9 +4,9 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Node](https://img.shields.io/badge/Node.js-≥18-green.svg)](https://nodejs.org)
-[![npm](https://img.shields.io/badge/npm-@dropmoltbot%2Fagentpay-red.svg)](https://www.npmjs.com/package/@dropmoltbot/agentpay)
-[![Protocol](https://img.shields.io/badge/Protocol-x402%20%2B%20MPP-purple.svg)](https://github.com/dropmoltbot/agentpay)
-[![Chains](https://img.shields.io/badge/Chains-Base%20%7C%20ETH%20%7C%20Tempo%20%7C%20Polygon%20%7C%20Monad%20%7C%20BSC-orange.svg)](https://github.com/dropmoltbot/agentpay)
+[![npm](https://img.shields.io/badge/npm-@dropmoltbot%2Fagentpay-red.svg)](https://www.npmjs.com/package/@dropxtor/agentpay)
+[![Protocol](https://img.shields.io/badge/Protocol-x402%20%2B%20MPP-purple.svg)](https://github.com/dropxtor/agentpay)
+[![Chains](https://img.shields.io/badge/Chains-Base%20%7C%20ETH%20%7C%20Tempo%20%7C%20Polygon%20%7C%20Monad%20%7C%20BSC-orange.svg)](https://github.com/dropxtor/agentpay)
 
 > **Agents don't need API keys. They need a wallet.**
 
@@ -31,7 +31,7 @@ Every AI agent eventually hits a paywall. The current options are broken:
 ## Install
 
 ```bash
-npm install @dropmoltbot/agentpay
+npm install @dropxtor/agentpay
 ```
 
 **Optional peer dependency** (for EIP-712 signing):
@@ -45,7 +45,7 @@ npm install viem
 ## Quick Start
 
 ```typescript
-import { AgentPay } from '@dropmoltbot/agentpay';
+import { AgentPay } from '@dropxtor/agentpay';
 
 const pay = new AgentPay({
   privateKey: process.env.PRIVATE_KEY as `0x${string}`,
@@ -63,7 +63,7 @@ const data = await response.json();
 
 ```bash
 # Install globally
-npm install -g @dropmoltbot/agentpay
+npm install -g @dropxtor/agentpay
 
 # Set your private key
 export PRIVATE_KEY=0x...
@@ -147,7 +147,7 @@ const res = await apiFetch('/v1/search?q=eth');
 ### `Wallet`
 
 ```typescript
-import { Wallet } from '@dropmoltbot/agentpay';
+import { Wallet } from '@dropxtor/agentpay';
 
 const wallet = new Wallet({
   privateKey: '0x...',
@@ -172,7 +172,7 @@ const sig = await wallet.signMessage('hello');
 Use the protocol clients directly for fine-grained control:
 
 ```typescript
-import { Wallet, X402Client, MPPClient } from '@dropmoltbot/agentpay';
+import { Wallet, X402Client, MPPClient } from '@dropxtor/agentpay';
 
 const wallet = new Wallet({ privateKey: '0x...', chain: 'base' });
 const x402 = new X402Client(wallet);
@@ -201,7 +201,7 @@ const res2 = await mpp.fetch('https://api.example.com/data');
 ### Custom Chains
 
 ```typescript
-import { AgentPay } from '@dropmoltbot/agentpay';
+import { AgentPay } from '@dropxtor/agentpay';
 
 const pay = new AgentPay({
   privateKey: '0x...',
@@ -263,7 +263,7 @@ console.log(pay.getDailySpend()); // "2.340000"
 ## Build From Source
 
 ```bash
-git clone https://github.com/dropmoltbot/agentpay.git
+git clone https://github.com/dropxtor/agentpay.git
 cd agentpay
 npm install
 npm run build
