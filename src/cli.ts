@@ -108,7 +108,7 @@ async function cmdFetch(args: string[]) {
   });
 
   console.log(`🤖 AgentPay — fetching ${url}`);
-  console.log(`   Chain: ${pay.chain.name} (${pay.chain.chainId})`);
+  console.log(`   Chain: ${pay.chainConfig.name} (${pay.chainConfig.chainId})`);
   console.log(`   Wallet: ${pay.address}`);
   console.log(`   Protocol: ${options.preferProtocol || 'x402'}`);
   console.log('');
@@ -132,7 +132,7 @@ async function cmdFetch(args: string[]) {
       console.log(`   ❌ Payment required but could not complete payment`);
       console.log(`   Response: ${text.slice(0, 300)}`);
     } else if (response.ok) {
-      console.log(`   ✅ Success${response.paid ? ' (paid)' : ' (free)'}`);
+      console.log(`   ✅ Success${(response as any).paid ? ' (paid)' : ' (free)'}`);
       try {
         const json = JSON.parse(text);
         console.log(`   Response: ${JSON.stringify(json, null, 2).slice(0, 500)}`);
@@ -161,9 +161,9 @@ function cmdWallet() {
   });
 
   console.log(`Wallet address: ${pay.address}`);
-  console.log(`Chain: ${pay.chain.name} (${pay.chain.chainId})`);
-  console.log(`USDC: ${pay.chain.usdcAddress}`);
-  console.log(`RPC: ${pay.chain.rpcUrl}`);
+  console.log(`Chain: ${pay.chainConfig.name} (${pay.chainConfig.chainId})`);
+  console.log(`USDC: ${pay.chainConfig.usdcAddress}`);
+  console.log(`RPC: ${pay.chainConfig.rpcUrl}`);
 }
 
 async function cmdTest() {
@@ -178,7 +178,7 @@ async function cmdTest() {
     });
     console.log('✅ Wallet creation: OK');
     console.log(`   Address: ${pay.address}`);
-    console.log(`   Chain: ${pay.chain.name}`);
+    console.log(`   Chain: ${pay.chainConfig.name}`);
   } catch (e) {
     console.log(`❌ Wallet creation: ${(e as Error).message}`);
   }

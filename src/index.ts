@@ -13,3 +13,25 @@ export { MPPClient, type MPPChallenge, type MPPPayment } from './mpp.js';
 export { Wallet, type WalletConfig } from './wallet.js';
 export { DEFAULT_CHAINS, type ChainConfig } from './chains.js';
 export { version } from './version.js';
+
+// API Registry
+export {
+  ALL_APIS,
+  CATEGORIES,
+  SEARCH_APIS,
+  CRYPTO_APIS,
+  AI_APIS,
+  SOCIAL_APIS,
+  DEV_APIS,
+  LOCATION_APIS,
+  getAPIsByCategory,
+  getAPIsByAuth,
+  getFreeAPIs,
+  getX402APIs,
+  getMPPAPIs,
+  getSelfHostableAPIs,
+  searchAPIs,
+  type APIEndpoint,
+  type APIAuthMethod,
+  type APIProtocol,
+} from './registry.js';

@@ -44,9 +44,11 @@
     "README.md",
     "LICENSE"
   ],
-  "dependencies": {},
   "devDependencies": {
-    "typescript": "^5.5.0",
-    "@types/node": "^22.0.0"
+    "@types/node": "^22.20.1",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "viem": "^2.55.2"
   }
 }

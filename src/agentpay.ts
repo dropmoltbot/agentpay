@@ -27,6 +27,7 @@
 import { Wallet, type WalletConfig } from './wallet.js';
 import { X402Client } from './x402.js';
 import { MPPClient } from './mpp.js';
+import { type ChainConfig } from './chains.js';
 
 export type PaymentProtocol = 'x402' | 'mpp';
 
@@ -72,11 +73,14 @@ export class AgentPay {
     this.timeout = config.timeout || 30000;
   }
 
-  /**
-   * Get the wallet address
-   */
+  /** Get the wallet address */
   get address(): string {
     return this.wallet.address;
+  }
+
+  /** Get the chain config */
+  get chainConfig(): ChainConfig {
+    return this.wallet.chain;
   }
 
   /**
